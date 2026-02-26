@@ -29,14 +29,12 @@ Review-Sentiment/
 │
 ├── data/
 │   └── Appliances_Reviews.csv
-│
-├── notebooks/
-│   ├── Data_Preprocessing.ipynb
-│   ├── LSTM_Model.ipynb
-│   ├── BERT_Model.ipynb
 |
-├── reports/
-│   └── project_report.pdf
+├── LSTM_Model.ipynb
+|
+├── BERT_Model.ipynb
+|
+├── project_report.pdf
 │
 └── README.md
 ```
