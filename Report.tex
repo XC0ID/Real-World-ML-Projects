@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{float}
+
+\geometry{margin=1in}
+
+\title{Chest X-Ray Pneumonia Detection Using Deep Learning}
+\author{Maulik Gajera}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Pneumonia is a serious lung infection that can be detected using chest X-ray imaging.
+This project applies deep learning techniques to automatically classify chest X-ray
+images as Normal or Pneumonia. Multiple convolutional neural network models are
+implemented and compared to evaluate their effectiveness for medical image classification.
+\end{abstract}
+
+\section{Introduction}
+
+Medical imaging plays an important role in diagnosing diseases. Chest X-rays are
+commonly used to detect lung infections such as pneumonia. However, manual
+interpretation by radiologists can take time and may vary depending on experience.
+
+Deep learning techniques, particularly Convolutional Neural Networks (CNNs),
+have shown strong performance in image classification tasks. This project
+explores the use of CNN-based architectures to detect pneumonia from chest
+X-ray images.
+
+\section{Problem Statement}
+
+The objective of this project is to build a deep learning model capable of
+classifying chest X-ray images into two categories:
+
+\begin{itemize}
+\item Normal
+\item Pneumonia
+\end{itemize}
+
+\section{Dataset}
+
+The dataset used in this project is the Chest X-Ray Pneumonia dataset.
+
+Dataset structure:
+
+\begin{verbatim}
+chest_xray/
+    train/
+        NORMAL/
+        PNEUMONIA/
+    test/
+        NORMAL/
+        PNEUMONIA/
+    val/
+        NORMAL/
+        PNEUMONIA/
+\end{verbatim}
+
+The dataset contains labeled X-ray images used for training and evaluation.
+
+\section{Data Preprocessing}
+
+The following preprocessing steps were applied:
+
+\begin{itemize}
+\item Image resizing
+\item Normalization
+\item Data augmentation
+\item Train / validation / test split
+\end{itemize}
+
+These steps improve model performance and generalization.
+
+\section{Models Implemented}
+
+Several deep learning models were trained and evaluated:
+
+\subsection{Custom CNN}
+A baseline convolutional neural network built using multiple convolution
+and pooling layers.
+
+\subsection{ResNet}
+Residual networks help train deeper models and improve feature extraction.
+
+\subsection{MobileNet}
+A lightweight architecture optimized for efficiency and speed.
+
+\subsection{EfficientNet}
+A modern architecture balancing depth, width, and resolution.
+
+\section{Training Process}
+
+The models were trained using GPU acceleration with the following configuration:
+
+\begin{itemize}
+\item Optimizer: Adam
+\item Loss Function: CrossEntropyLoss
+\item Batch Size: 32
+\item Epochs: 10 -- 20
+\end{itemize}
+
+\section{Evaluation Metrics}
+
+Model performance was evaluated using:
+
+\begin{itemize}
+\item Accuracy
+\item Precision
+\item Recall
+\item Confusion Matrix
+\end{itemize}
+
+\section{Results}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+Model & Accuracy \\
+\hline
+CNN & -- \\
+ResNet & -- \\
+MobileNet & -- \\
+EfficientNet & -- \\
+\hline
+\end{tabular}
+\caption{Model Comparison}
+\end{table}
+
+\section{Visualization}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{images/accuracy.png}
+\caption{Training Accuracy}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{images/loss.png}
+\caption{Training Loss}
+\end{figure}
+
+\section{Conclusion}
+
+This project demonstrates that deep learning models can effectively detect
+pneumonia from chest X-ray images. CNN-based architectures are capable of
+learning meaningful patterns from medical imaging data and assisting in
+automated diagnosis.
+
+\section{Future Work}
+
+Future improvements may include:
+
+\begin{itemize}
+\item Larger and more diverse datasets
+\item Hyperparameter optimization
+\item Model explainability using Grad-CAM
+\item Deployment as a web application
+\end{itemize}
+
+\section{References}
+
+\begin{itemize}
+\item Kaggle Chest X-Ray Dataset
+\item Deep Learning for Medical Image Analysis
+\item Convolutional Neural Networks Research Papers
+\end{itemize}
+
+\end{document}
